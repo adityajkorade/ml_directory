@@ -71,6 +71,10 @@ RUN /opt/conda/bin/mamba install -c conda-forge pytorch torchvision torchaudio c
 RUN mkdir -p /home/${NB_USER}/.jupyter
 COPY jupyter_lab_config.py /home/${NB_USER}/.jupyter/
 
+# Copy the SSL certificates
+COPY mycert.pem /home/${NB_USER}/.jupyter/
+COPY mykey.key /home/${NB_USER}/.jupyter/
+
 # Copy the startup script
 COPY startup.sh /home/${NB_USER}/startup.sh
 RUN chmod +x /home/${NB_USER}/startup.sh
