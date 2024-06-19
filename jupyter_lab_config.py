@@ -18,4 +18,4 @@ c.ResourceUseDisplay.mem_limit = None
 c.ResourceUseDisplay.cpu_limit = None
 
 # Set the password
-c.NotebookApp.password = 'sha1:abcd1234:examplehashedpassword'
+#c.NotebookApp.password = 'sha1:abcd1234:examplehashedpassword'
